@@ -90,8 +90,8 @@ export default createStore({
     ]
   },
   mutations: {
-    SET_RECIPES(state,data){
-      state.recipes = data //把data傳入state.recipes
+    SET_RECIPES(state){
+       //把data傳入state.recipes
       //save LS
       LS.save(state.recipes);
     },

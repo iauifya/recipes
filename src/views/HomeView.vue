@@ -280,7 +280,12 @@ function removeRecipe(recipe) {
 // })
 // }
 onMounted(() => {
-  store.dispatch("INIT_RECIPES");
+  // store.dispatch("INIT_RECIPES");
+  if (JSON.stringify(store.state.recipes) == "[]") {
+    store.dispatch("INIT_RECIPES");
+    
+  }
+  console.log(store.state.recipes);
 });
 </script>
 <style src="../assets/css/style.css" scoped></style>
